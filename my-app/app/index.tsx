@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import StyledInput from '../components/styled-input';
 import StyledButton from '../components/styled-input/button';
+import DisplayAnImage from '../components/styled-input/image';
 import { router } from 'expo-router'
+import React from 'react';
+import DisplayAnImage from '../components/styled-input/image';
 
 export default function Login() {
 
@@ -13,6 +16,7 @@ const handleLogin = () => {
 
   return (
     <View style={styles.container}>
+      <DisplayAnImage></DisplayAnImage>
       <StyledInput placeholder="E-mail"
       onChangeText={(text) => console.log(text)} />
       <StyledInput placeholder="Senha"
