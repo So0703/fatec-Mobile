@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "MeuPrimeiroApp",
-    "slug": "MeuPrimeiroApp",
+    "name": "my-app",
+    "slug": "my-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "meuprimeiroapp",
     "userInterfaceStyle": "light",
+    "scheme": "my-app",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
