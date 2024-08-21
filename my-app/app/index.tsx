@@ -1,12 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import StyledInput from '../components/styled-input';
+import StyledButton from '../components/styled-input/button';
+import { router } from 'expo-router'
 
-export default function Home() {
+export default function Login() {
+
+const handleLogin = () => {
+  router.replace('home')
+}
+
+
   return (
     <View style={styles.container}>
-      <Text>Olá mundo!!!</Text>
-      <StyledInput placeholder='Digite seu login' onChangeText={() => console.log("Foi paizão")}></StyledInput>
+      <StyledInput placeholder="E-mail"
+      onChangeText={(text) => console.log(text)} />
+      <StyledInput placeholder="Senha"
+      onChangeText={(text) => console.log(text)} />
+      <StyledButton text="Acessar o App"
+      onClick={handleLogin} />
       <StatusBar style="auto" />
     </View>
   );
