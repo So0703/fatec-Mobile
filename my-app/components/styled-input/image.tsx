@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet, ImageSourcePropType } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -15,27 +15,20 @@ const styles = StyleSheet.create({
   },
 });
 
-const DisplayAnImage = () => {
+interface DisplayAnImageProps {
+  imageUri: ImageSourcePropType
+}
+
+const DisplayAnImage: React.FC<DisplayAnImageProps> = ({imageUri}) => {
   return (
     <View style={styles.container}>
       <Image
-        style={styles.tinyLogo}
-        source={require('my-app\assets\favicon.png')}
+      style={styles.tinyLogo}
+      source={imageUri}
       />
-      <Image
-        style={styles.tinyLogo}
-        source={{
-          uri: 'my-app\assets\favicon.png',
-        }}
-      />
-      <Image
-        style={styles.logo}
-        source={{
-          uri: 'my-app\assets\favicon.png',
-        }}
-      />
-    </View>
-  );
-};
+      </View>
+  )
+}
+
 
 export default DisplayAnImage;
